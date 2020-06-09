@@ -1,0 +1,344 @@
+/* Reset  */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+ul {
+  list-style: none
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0
+}
+
+html {
+  box-sizing: border-box
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%
+}
+
+iframe {
+  border: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left
+}
+
+/* Colors Palette  */
+:root {
+  --black: #1b262c;
+  --darkBlue: #0f4c75;
+  --mediumBlue: #3282b8;
+  --lightBlue: #bbe1fa;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--lightBlue);
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightBlue);
+}
+
+.flex-content-wrapper {
+  width: 100%;
+  display: flex;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.main-header {
+  justify-content: flex-end;
+  padding: 25px 0;
+  background-color: var(--darkBlue);
+  position: fixed;
+  top: 0;
+}
+
+.main-header__menu {
+  display: flex;
+  font-weight: bold;
+}
+
+.menu-item {
+  margin-right: 25px;
+}
+
+/* Main content  */
+.main-content {
+  flex-direction: column;
+}
+
+.welcome-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.welcome-section__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--lightBlue);
+  margin-bottom: 10px;
+}
+
+.developer {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--mediumBlue);
+  margin-bottom: 20px;
+}
+
+/* Projects section  */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.projects-section__title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--black);
+  text-align: center;
+  margin: 20px auto;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--black);
+}
+
+/* Project card */
+.projects-card-content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card {
+  width: 100%;
+  border-radius: 5px;
+  max-width: 335px;
+  height: auto;
+  box-shadow: 0 1px 20px var(--mediumBlue);
+  margin-bottom: 30px;
+}
+
+.project-card__img {
+  height: 320px;
+  width: 100%;
+  display: inline-block;
+  background-image: url('https://drivingschoolmiamifl.com/wp-content/uploads/2019/07/placeholder.png');
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: center;
+}
+
+.project-card__title {
+  background-color: var(--mediumBlue);
+  padding: 20px;
+  font-size: 18px;
+  width: 100%;
+  font-weight: bold;
+  color: var(--black);
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.project-card__title:hover .code-detail {
+  opacity: 1;
+}
+
+.code-detail {
+  color: var(--lightBlue);
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all .4s;
+}
+
+.projects-section__button-show-all {
+  width: 150px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: var(--darkBlue);
+  color: var(--lightBlue);
+  border-radius: 5px;
+}
+
+/* Contact section  */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  margin-top: 30px;
+  padding: 150px 0;
+  width: 100%;
+  border-bottom: 5px solid var(--darkBlue);
+}
+
+.contact-section__title {
+  font-size: 38px;
+}
+
+.contact-section__social-links {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 480px;
+}
+
+.social-link {
+  font-size: 18px;
+}
+
+.social-item {
+  transition: all .3s;
+}
+
+.social-item:hover {
+  transform: translateY(5px);
+}
+
+/* Footer  */
+.main-footer {
+  padding: 50px 0;
+  background-color: var(--black);
+  justify-content: flex-end;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: var(--lightBlue);
+  text-align: right;
+  margin-right: 20px;
+}
+
+@media screen and (min-width:860px) {
+
+  .projects-card-content-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 720px;
+  }
+
+  .button-container {
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width:1023px) {
+  .welcome-section__title {
+    font-size: 60px;
+  }
+
+  .developer {
+    font-size: 20px;
+  }
+
+  .main-content {
+    margin: 0 auto;
+  }
+
+  .projects-section {
+    margin: 40px auto;
+  }
+
+  .projects-section__title {
+    margin-bottom: 50px;
+  }
+
+
+  .project-card {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .projects-card-content-wrapper {
+    max-width: 1200px;
+  }
+}
